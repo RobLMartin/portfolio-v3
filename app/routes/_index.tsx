@@ -36,9 +36,7 @@ export default function Home() {
     <div className="mt-20 lg:mt-0 border-t border-neutral-300 border-r">
       <div className="lg:w-2/3 lg:border-r border-neutral-300">
         <div className="p-6 md:p-12 py-[15vh] md:py-[25vh]">
-          <h1 className="text-6xl sm:text-7xl md:text-8xl xl:text-9xl">
-            {data.headline}
-          </h1>
+          <h1 className="text-6xl sm:text-7xl md:text-8xl">{data.headline}</h1>
           <p className="md:leading-[3rem] text-lg sm:text-xl md:text-2xl tracking-wider text-neutral-600 max-w-xl lg:max-w-3xl">
             {data.subtitle}
           </p>
@@ -97,7 +95,7 @@ export default function Home() {
           ))}
         </div>
       </div>
-      <div className="border-neutral-300 border-b p-6 md:p-12 flex xl:items-center xl:justify-between flex-col xl:flex-row items-left gap-6">
+      <div className="border-neutral-300 border-b px-6 pt-6 md:px-12 md:pt-12 pb-20 flex xl:items-center xl:justify-between flex-col xl:flex-row items-left gap-6">
         <h2 className="text-3xl md:text-4xl max-w-2xl">
           {data.secondHeadline}
         </h2>

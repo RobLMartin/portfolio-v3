@@ -47,7 +47,7 @@ export default function PortfolioPage() {
             to={`/blog/${project.post.slug.current}`}
             className="flex flex-col items-start justify-start border-neutral-300 hover:bg-neutral-50 transition-colors duration-300 ease-in-out border-b md:border-r md:h-[563.64px]"
           >
-            <div className="w-full overflow-hidden border-neutral-300 md:border-b-0">
+            <div className="w-full overflow-hidden border-neutral-300 md:border-b-0 max-h-2/5">
               <SanityImage
                 image={project.post.mainImage}
                 maxWidth={507}
@@ -56,36 +56,38 @@ export default function PortfolioPage() {
               />
             </div>
 
-            <div className="p-6 mb-12">
-              <h2 className="font-semibold text-lg md:text-xl mb-1">
-                {project.title}
-              </h2>
-              <p className="text-neutral-600 text-md md:text-lg mb-1">
-                {project.description}
-              </p>
-              <a
-                href={project.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                onClick={(e) => e.stopPropagation()}
-                className="items-center mb-3 flex hover:underline"
-              >
-                <Link2Icon />
-                <span className="ml-2">{project.link}</span>
-              </a>
-              <div className="flex flex-wrap gap-2">
-                {project.technologies.map(({ name }: any) => (
-                  <span
-                    key={name}
-                    className="text-xs md:text-base font-medium text-primary-800 bg-primary-100 px-4 py-1 rounded-full"
-                  >
-                    {name}
-                  </span>
-                ))}
+            <div className="h-3/5 flex flex-col justify-between w-full">
+              <div className="p-6">
+                <h2 className="font-semibold text-lg md:text-xl mb-1">
+                  {project.title}
+                </h2>
+                <p className="text-neutral-600 text-md md:text-lg mb-1">
+                  {project.description}
+                </p>
+                <a
+                  href={project.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={(e) => e.stopPropagation()}
+                  className="items-center mb-3 flex hover:underline"
+                >
+                  <Link2Icon />
+                  <span className="ml-2">{project.link}</span>
+                </a>
+                <div className="flex flex-wrap gap-2">
+                  {project.technologies.map(({ name }: any) => (
+                    <span
+                      key={name}
+                      className="text-xs md:text-base font-medium text-primary-800 bg-primary-100 px-4 py-1 rounded-full"
+                    >
+                      {name}
+                    </span>
+                  ))}
+                </div>
               </div>
-            </div>
-            <div className="flex justify-end w-full p-6">
-              <ArrowRightIcon height={28} width={28} />
+              <div className="flex justify-end w-full p-6">
+                <ArrowRightIcon height={28} width={28} />
+              </div>
             </div>
           </Link>
         ))}
