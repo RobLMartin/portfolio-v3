@@ -1,3 +1,26 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: "Inter Tight";
+    src: url("/fonts/InterTight-Regular.ttf");
+    font-weight: normal;
+  }
+  @font-face {
+    font-family: "Inter Tight";
+    src: url("/fonts/InterTight-Medium.ttf");
+    font-weight: 500;
+  }
+  @font-face {
+    font-family: "Inter Tight";
+    src: url("/fonts/InterTight-SemiBold.ttf");
+    font-weight: 600;
+  }
+  @font-face {
+    font-family: "Inter Tight";
+    src: url("/fonts/InterTight-Bold.ttf");
+    font-weight: 700;
+  }
+}
