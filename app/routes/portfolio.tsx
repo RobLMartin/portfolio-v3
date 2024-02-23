@@ -34,13 +34,13 @@ export default function PortfolioPage() {
   }
 
   return (
-    <div className="flex flex-col md:flex-row h-full w-full border-b border-t border-neutral-300 mt-20 lg:mt-0 relative">
-      <div className="md:w-1/3 px-6 md:px-12 border-b md:border-b-0 md:border-r border-neutral-300">
+    <div className="flex flex-col md:flex-row h-full w-full border-neutral-300 mt-20 lg:mt-0 relative">
+      <div className="md:w-1/3 px-6 md:px-12 border-neutral-300">
         <h1 className="font-semibold text-2xl py-6 md:py-12 leading-[45px] sticky top-20 lg:top-0">
           Portfolio
         </h1>
       </div>
-      <div className="md:w-2/3 grid xl:grid-cols-2 border-neutral-300 h-fit">
+      <div className="md:w-2/3 grid xl:grid-cols-2 border-neutral-300 h-fit border-l">
         {data.map((project) => (
           <Link
             key={project.post.slug.current}
