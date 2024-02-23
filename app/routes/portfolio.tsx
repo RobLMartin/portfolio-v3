@@ -64,16 +64,18 @@ export default function PortfolioPage() {
                 <p className="text-neutral-600 text-md md:text-lg mb-1">
                   {project.description}
                 </p>
-                <a
-                  href={project.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  onClick={(e) => e.stopPropagation()}
-                  className="items-center mb-3 flex hover:underline"
-                >
-                  <Link2Icon />
-                  <span className="ml-2">{project.link}</span>
-                </a>
+                {project.link ? (
+                  <a
+                    href={project.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onClick={(e) => e.stopPropagation()}
+                    className="items-center mb-3 flex hover:underline"
+                  >
+                    <Link2Icon />
+                    <span className="ml-2">{project.link}</span>
+                  </a>
+                ) : null}
                 <div className="flex flex-wrap gap-2">
                   {project.technologies.map(({ name }: any) => (
                     <span
