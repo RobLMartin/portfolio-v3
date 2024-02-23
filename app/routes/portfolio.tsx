@@ -40,7 +40,7 @@ export default function PortfolioPage() {
           Portfolio
         </h1>
       </div>
-      <div className="md:w-2/3 grid xl:grid-cols-2 border-neutral-300 h-fit border-l">
+      <div className="md:w-2/3 grid xl:grid-cols-2 border-neutral-300 h-fit border-l min-h-screen auto-rows-max">
         {data.map((project) => (
           <Link
             key={project.post.slug.current}
